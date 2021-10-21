@@ -55,14 +55,6 @@ header #about button {
 	padding-left: 20px;
 }
 
-/*
-header #logo input {
-  font-size: 1.2em;
-  line-height: 25px;
-  margin-left: 20px;
-  font-family: 'Suez One', serif;
-}
-*/
 @media (min-width: 701px) {
 	header > div {
 		float: left;
@@ -140,13 +132,29 @@ header #input_search button {
   border-radius: 0 15px 15px 0;
   cursor: pointer;
 }
-/*header #input_search button:before {
-  content: "\f002";
-  font-family: FontAwesome;
-  font-size: 16px;
-  color: #F9F0DA;
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 370px;
+	border: 1px solid #000;
+	border-radius: 0 0 15px 15px;
+    z-index: 1;
 }
-*/
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+	border-top: 1px solid #000;
+    text-decoration: none;
+    display: block;
+}
+
+#input_search:hover .dropdown-content {
+    display: block;
+}
+
 /* Стили для фиксированной шапки */
 
 .fixed {
@@ -289,18 +297,33 @@ header.fixed #logo {
 #services span {color: #a0a0a0}
 
 /*Корзина*/
-/*#topCart {
+#topCart {
 	width: 100%;
-	
+	height: 800px;
   background-image: url(https://porusski.me/wp-content/uploads/2016/10/feng_shui-kwiaty-00.jpg);
   background-blend-mode: multiply;
   background-color: #2e3a44;
   background-size: cover;
   color: #fff;
+}
+
+/*@media (min-width: 1001px) {
+  #topCart {
+    height: 800px;
+  }
 }*/
+
+@media (max-width: 650px) {
+  #topCart {
+    font-size: 0.7em;
+  }
+}
+
 #my-cart {
   float: left;
-  height: 450px;
+  height: 500px;
+  margin: 5% 0% 0% 17%;
+  border-radius: 15px;
   background-color: #f6f6f6;
   border-top: 2px solid silver;
   color: #484848;
@@ -315,7 +338,7 @@ header.fixed #logo {
 
 @media (min-width: 1401px) {
   #my-cart {
-    padding: 150px 20%;
+    padding: 40px;	
     width: 60%;
   }
 }
