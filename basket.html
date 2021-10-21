@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ландшафт</title>
+  <link rel="stylesheet" href="css/main1.css">
+</head>
+<body>
+  <header>
+	<div id="logo" onclick="document.location='index.html'">
+      <span>Landscape</span>
+    </div>
+	<div id="input_search">
+		<form>
+			<input type="text" placeholder="Искать здесь..." id="search">
+			<button type="submit"><img src="img/search3.png" width="20" alt=""></button>
+		</form>
+	</div>
+    <div id="about">
+      <a href="#" onclick="slowScroll('#services')" title="Услуги">Услуги</a>
+      <a href="#" onclick="slowScroll('#contacts')" title="Каталог">Каталог</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Наши работы">Наши работы</a>
+      <a href="#" onclick="slowScroll('#faq')" title="Отзывы">Отзывы</a>
+	  <a href="#" onclick="slowScroll('#main')" title="О Нас">О Нас</a>
+	  <button>
+		<img src="img/basket.png" width="24" alt="">0.00 ₽
+	  </button>
+    </div>
+  </header>
+  <!--
+  <div class="container">
+    <h2>Webdevkin. Интернет-магазин. Модульный Javascript</h2>
+    <br>
+    <ul class="nav nav-pills">
+        <li><a href="/">Каталог</a></li>
+        <li class="active"><a rel="nofollow" href="cart.html">Корзина<span id="total-cart-count" class="badge"></span></a></li>
+    </ul>
+    <br>
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Артикул</th>
+                    <th>Название</th>
+                    <th>Цена</th>
+                    <th>Количество</th>
+                    <th>Сумма</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="cart">
+                <tr><td colspan="6"><img src="img/loading.gif" alt=""></td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div>Итого: <span id="total-cart-summa">0</span> руб.</div>
+    <br>
+    <button id="order" class="btn btn-info">Оформить заказ</button>
+</div>
+  -->
+  <div id="my-cart"></div>
+  
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/cart.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+	$(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
