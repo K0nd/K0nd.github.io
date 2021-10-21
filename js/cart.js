@@ -13,9 +13,9 @@ $.getJSON('goods.json', function (data) {
 		out+='<ul class="oglavl">';
         for (var key in cart) {
 			out+='<li><span class="text"><button class="delete" data-art="'+key+'">x</button>'+' '+goods[key].name+'</span>';
-            out += '<span class="page">'+cart[key]*goods[key].cost+'<button class="minus" data-art="'+key+'">-</button>';
+            out += '<span class="page">'+cart[key]*goods[key].cost+'<button class="minus" data-art="'+key+'">-</button>'+' ';
             out += cart[key];
-            out += '<button class="plus" data-art="'+key+'">+</button>';
+            out += ' '+'<button class="plus" data-art="'+key+'">+</button>';
 			out += '</span></li>';
         }
 		
