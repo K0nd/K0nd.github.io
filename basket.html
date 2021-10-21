@@ -25,42 +25,34 @@
       <a href="#" onclick="slowScroll('#faq')" title="Отзывы">Отзывы</a>
 	  <a href="#" onclick="slowScroll('#main')" title="О Нас">О Нас</a>
 	  <button>
-		<img src="img/basket.png" width="24" alt="">0.00 ₽
+		<img src="img/basket.png" width="24" alt=""><div id="totalPrice"></div>
 	  </button>
     </div>
   </header>
-  <!--
-  <div class="container">
-    <h2>Webdevkin. Интернет-магазин. Модульный Javascript</h2>
-    <br>
-    <ul class="nav nav-pills">
-        <li><a href="/">Каталог</a></li>
-        <li class="active"><a rel="nofollow" href="cart.html">Корзина<span id="total-cart-count" class="badge"></span></a></li>
-    </ul>
-    <br>
-    <div class="table-responsive">
-        <table class="table table-hover table-bordered">
-            <thead>
-                <tr>
-                    <th>Артикул</th>
-                    <th>Название</th>
-                    <th>Цена</th>
-                    <th>Количество</th>
-                    <th>Сумма</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody id="cart">
-                <tr><td colspan="6"><img src="img/loading.gif" alt=""></td></tr>
-            </tbody>
-        </table>
-    </div>
-    <div>Итого: <span id="total-cart-summa">0</span> руб.</div>
-    <br>
-    <button id="order" class="btn btn-info">Оформить заказ</button>
-</div>
-  -->
-  <div id="my-cart"></div>
+	<div id="topCart">
+		<div id="my-cart"></div>
+	</div>
+  
+  <div id="contacts">
+	  <div id="Answer">
+		<h5>Обратная связь</h5><br>
+		
+		<form id="form_input">
+		  <label for="name">Имя <span>*</span></label><br>
+		  <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+		  <label for="email">Ваша почта <span>*</span></label><br>
+				<input type="email" placeholder="Введите email" name="email" id="email"><br>
+				<label for="message">Сообщение <span>*</span></label><br>
+				<textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+				<div id="mess_send" class="btn">Отправить</div>
+		</form>
+	</div>
+	<div id="Adress">
+		<h5>Контакты</h5>
+		<h6>+ 7-999-999-99-99<br>
+		Москва, Вадковский пер., д.1</h6>
+	</div>
+  </div>
   
   
   
