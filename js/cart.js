@@ -18,6 +18,15 @@ $.getJSON('goods.json', function (data) {
             out += '<button class="plus" data-art="'+key+'">+</button>';
 			out += '</span></li>';
         }
+		
+		var outTotalPrice='';
+		var totalPrice = 0;
+		for (var w in cart){
+			totalPrice += cart[w]*data[w].cost;
+		}
+		outTotalPrice+=totalPrice + ' ₽';
+		$('#totalPrice').html(outTotalPrice);
+		
         $('#my-cart').html(out);
 		$('button.plus').on('click', plusGoods);
 		$('button.minus').on('click', minusGoods);
